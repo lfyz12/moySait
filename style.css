@@ -1,0 +1,169 @@
+/* Общие стили для всех устройств */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 75%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid blue;
+    border-radius: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+@media screen {
+    h1 {
+        color: darkblue;
+    }
+
+    @media (min-width: 1200px) {
+        header {
+            width: 60%;
+            height: 60%;
+        }
+
+        nav a {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    header {
+        width: 70%;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        width: 85%;
+    }
+
+    nav {
+        width: 80%;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    header {
+        width: 90%;
+        height: auto;
+        padding: 12px;
+    }
+
+    nav {
+        width: 90%;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+    }
+
+    nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 8px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media print {
+    body {
+        display: block;
+    }
+
+    header {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    nav a {
+        color: black;
+        font-size: 1rem;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    nav, img {
+        display: none;
+    }
+}
+
+@media handheld, (max-width: 768px) {
+    header {
+        width: 90%;
+        height: auto;
+    }
+
+    nav {
+        width: 90%;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    body {
+        flex-direction: column;
+        padding: 8px;
+    }
+}
